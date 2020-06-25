@@ -9,18 +9,48 @@ fetch(urlWeather)
     .then(json => displayData(json));
 
 function displayData(json) {
-
-    let todayHigh = json[556].AT.mx * 1.8 + 32 // Convert API temperature to Fahrenheit
-    var n = todayHigh.toFixed(0);
-    let todayLow = json[556].AT.mn * 1.8 + 32 // Convert API temperature to Fahrenheit
-    let todayWind = json[556].HWS.av * 2.2369 // Convert API wind speed to MPH
+console.log(json)
+    let todayHigh = Math.floor(json[561].AT.mx * 1.8 + 32) // Convert API temperature to Fahrenheit
+    let todayLow = Math.floor(json[561].AT.mn * 1.8 + 32) // Convert API temperature to Fahrenheit
+    let todayWind = Math.floor(json[561].HWS.av * 2.2369) // Convert API wind speed to MPH
     let date = new Date().toDateString()
-    console.log(json)
     // console.log(todayHigh, todayLow, todayWind)
-    document.getElementById('date').innerText = `Today is ${date}`
-    document.getElementById('high').innerText = `The high will reach a chilly ${todayHigh} degrees F`
-    document.getElementById('low').innerText = `The low will reach a frostbitten ${todayLow} degrees F `
-    document.getElementById('wind').innerText = `The wind speed is ${todayWind} mph`
+
+    let dynamicDate = `Today is ${date}`
+    let dynamicHigh = `The high will reach a chilly ${todayHigh} degrees F`
+    let dynamicLow = `The low will reach a frostbitten ${todayLow} degrees F`
+    let dynamicWind = `The wind speed is a whopping ${todayWind} mph`
+
+    document.getElementById('date').innerText = dynamicDate
+    document.getElementById('high').innerText = dynamicHigh
+    document.getElementById('low').innerText = dynamicLow
+    document.getElementById('wind').innerText = dynamicWind
+    
+    // let i = 0;
+    // let speed = 30;
+
+    // let array = [dynamicDate, dynamicHigh, dynamicLow, dynamicWind]
+
+    // function typedText() {
+    //     for (arr of array) {
+    //         if (i < arr) {
+    //             document.querySelectorAll("p.text").innerText += arr.charAt(i) ;
+    //             i++;
+    //             setTimeout(typedText, speed);
+    //             console.log(arr)
+    //     }
+       
+    //     }
+    // }
+
+
+    
+//     console.log(test)
+
+//    let typedDate = document.getElementById('date').innerText = `Today is ${date}`
+//    let typedHigh = document.getElementById('high').innerText = `The high will reach a chilly ${todayHigh} degrees F`
+//    let typedLow = document.getElementById('low').innerText = `The low will reach a frostbitten ${todayLow} degrees F `
+//    let typedWind = document.getElementById('wind').innerText = `The wind speed is a whopping ${todayWind} mph`
 }
 
 // sol_keys: Array(7)
