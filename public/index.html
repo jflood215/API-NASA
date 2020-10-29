@@ -1,64 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- CSS only -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
-        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
-    <link rel="stylesheet" href="index.css">
-    <title>API Project #2</title>
-</head>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+      integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="index.css" />
+    <title>API Project</title>
+  </head>
 
-<body>
+  <body>
     <div class="jumbotron">
-        <h1 class="display-4">Mars Weather API</h1>
-        <img id="mars" src="" alt="">
-        <p class ="text" id="date">Loading...</p>
-        <p class="text" id="high">Loading...</p>
-        <p class="text" id="low">Loading...</p>
-        <p class="text" id="wind">Loading...</p>
-       
-        <!-- <a class="btn btn-primary btn-lg" id="button" href="#" role="button">Get Weather</a> -->
-      </div>
+      <h1 class="display-4">Mars Weather API</h1>
+      <img id="mars" src="" alt="" />
+      <p class="text" id="date">Loading...</p>
+      <p class="text" id="high">Loading...</p>
+      <p class="text" id="low">Loading...</p>
+      <p class="text" id="wind">Loading...</p>
 
-<!-- The core Firebase JS SDK is always required and must be listed first -->
-<script src="https://www.gstatic.com/firebasejs/7.15.3/firebase-app.js"></script>
+      <!-- <a class="btn btn-primary btn-lg" id="button" href="#" role="button">Get Weather</a> -->
+    </div>
 
-<!-- TODO: Add SDKs for Firebase products that you want to use
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/7.15.3/firebase-app.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
      https://firebase.google.com/docs/web/setup#available-libraries -->
-<script src="https://www.gstatic.com/firebasejs/7.15.3/firebase-analytics.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.15.3/firebase-analytics.js"></script>
 
-<script>
-  // Your web app's Firebase configuration
-  var firebaseConfig = {
-    apiKey: "AIzaSyAE_LonPXLMmKpcQXE43QsNKJi5odk6Dww",
-    authDomain: "api-nasa---marsweather.firebaseapp.com",
-    databaseURL: "https://api-nasa---marsweather.firebaseio.com",
-    projectId: "api-nasa---marsweather",
-    storageBucket: "api-nasa---marsweather.appspot.com",
-    messagingSenderId: "288791151615",
-    appId: "1:288791151615:web:689c22fc86579cb492ddca",
-    measurementId: "G-ZD0P77F6VN"
-  };
-  // Initialize Firebase
-  firebase.initializeApp(firebaseConfig);
-  firebase.analytics();
-</script>
+    <script>
+      // Your web app's Firebase configuration
+      var firebaseConfig = {
+        apiKey: "AIzaSyAE_LonPXLMmKpcQXE43QsNKJi5odk6Dww",
+        authDomain: "api-nasa---marsweather.firebaseapp.com",
+        databaseURL: "https://api-nasa---marsweather.firebaseio.com",
+        projectId: "api-nasa---marsweather",
+        storageBucket: "api-nasa---marsweather.appspot.com",
+        messagingSenderId: "288791151615",
+        appId: "1:288791151615:web:689c22fc86579cb492ddca",
+        measurementId: "G-ZD0P77F6VN",
+      };
+      // Initialize Firebase
+      firebase.initializeApp(firebaseConfig);
+      firebase.analytics();
+    </script>
 
     <!-- JS, Popper.js, and jQuery -->
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-        crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
-        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
-        crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
-        integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
-        crossorigin="anonymous"></script>
-        <!-- My JavaScript-->
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+      integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+      crossorigin="anonymous"
+    ></script>
+    <!-- My JavaScript-->
     <script src="index.js"></script>
-</body>
-
+  </body>
 </html>

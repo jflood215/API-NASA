@@ -1,31 +1,33 @@
-body, html {
-    height: 100%;
-    overflow: hidden;
-  }
-
-.jumbotron {
-    background-image: url(https://apod.nasa.gov/apod/image/1910/ClayCache_Curiosity_960.jpg);
-    height: 100%;
-    background-repeat: no-repeat;
-    background-size: cover;
-    filter: brightness(103%);
-    
+body,
+html {
+  height: 100%;
+  overflow: hidden;
 }
 
-.display-4{
-    text-align: center;
-    margin-top: -0.6em;
+.jumbotron {
+  background-image: url(https://apod.nasa.gov/apod/image/1910/ClayCache_Curiosity_960.jpg);
+  height: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  filter: brightness(95%);
+}
+
+.display-4 {
+  text-align: center;
+  margin-top: -0.6em;
+  color: white;
 }
 
 #button {
-    margin-top: 14.5em;
-    margin-left: 18em;
-    background-color: #ff7400;
+  margin-top: 14.5em;
+  margin-left: 18em;
+  background-color: #ff7400;
 }
 
 .text {
-    font-size: 1.3em;
-    /* overflow: hidden;
+  font-size: 1.3em;
+  color: white;
+  /* overflow: hidden;
     border-right: .15em solid orange;
     white-space: nowrap;
     margin: 0 auto;
