@@ -13,7 +13,7 @@ function displayData(json) {
   console.log(json);
 
   console.log(json.sol_keys.length);
-  for (let i = 2; i < json.sol_keys.length; i++) {
+  for (let i = 4; i < json.sol_keys.length; i++) {
     let solNum = json.sol_keys[i];
     console.log(solNum);
     let solObject = json[solNum];
